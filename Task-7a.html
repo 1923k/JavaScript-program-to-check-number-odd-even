@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number Checker</title>
+</head>
+<body>
+  <h2>Number Checker Program</h2>
+  <input type="number" id="userNumber" placeholder="Enter a number">
+  <button onclick="checkNumber()">Check</button>
+
+  <p id="result"></p>
+
+  <script>
+    function checkNumber() {
+      // Get user input
+      let num = document.getElementById("userNumber").value;
+      num = Number(num);
+
+      let result = "";
+
+      // 1. Check if the number is even or odd
+      if (num % 2 === 0) {
+        result += "The number is Even.<br>";
+      } else {
+        result += "The number is Odd.<br>";
+      }
+
+      // 2. Verify if the number is greater than 50
+      if (num > 50) {
+        result += "The number is greater than 50.<br>";
+      } else {
+        result += "The number is not greater than 50.<br>";
+      }
+
+      // 3. Use logical operator to print "Number is valid"
+      if (num > 50 && num % 2 === 0) {
+        result += "<b>Number is valid</b>";
+      }
+
+      // Display result
+      document.getElementById("result").innerHTML = result;
+    }
+  </script>
+</body>
+</html>

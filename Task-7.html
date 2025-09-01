@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number Checker</title>
+</head>
+<body>
+  <h2>Number Checker Program</h2>
+  <script>
+    // Accept input from the user
+    let num = Number(prompt("Enter a number:"));
+
+    // 1. Check if the number is even or odd
+    if (num % 2 === 0) {
+      document.write("The number is Even.<br>");
+    } else {
+      document.write("The number is Odd.<br>");
+    }
+
+    // 2. Verify if the number is greater than 50
+    if (num > 50) {
+      document.write("The number is greater than 50.<br>");
+    } else {
+      document.write("The number is not greater than 50.<br>");
+    }
+
+    // 3. Logical operator check
+    if (num > 50 && num % 2 === 0) {
+      document.write("<b>Number is valid</b>");
+    }
+  </script>
+</body>
+</html>
